@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sajid-M.github.io/deeplinkwebapp",
   "name": "deeplinkwebapp",
   "version": "0.1.0",
   "private": true,
@@ -6,11 +7,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "npm run build && npm run export && npx gh-pages -d out -b main -p '/deeplinkwebapp'"
   },
   "dependencies": {
+    "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
